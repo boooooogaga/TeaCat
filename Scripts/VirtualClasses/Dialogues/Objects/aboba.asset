@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c075d54a27f75448999397129e686bc, type: 3}
+  m_Name: aboba
+  m_EditorClassIdentifier: 
+  currentRoot: 0
+  roots:
+  - lines:
+    - speakerName: ???
+      text: hi
+      idle:
+      - {fileID: -719747690, guid: bed4c24a6488cfe43854ed01b18687b8, type: 3}
+      talking:
+      - {fileID: 1511341795, guid: bed4c24a6488cfe43854ed01b18687b8, type: 3}
+      leftSide: 0
+      events: []
+      readChoice: 0
+      choice:
+        options: []

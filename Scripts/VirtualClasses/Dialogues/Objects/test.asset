@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c075d54a27f75448999397129e686bc, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  currentRoot: 0
+  roots:
+  - lines:
+    - speakerName: Crystal
+      text: hoiiiiiii
+      idle:
+      - {fileID: -860893131, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1901659344, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -2142345123, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: 128436131, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      talking:
+      - {fileID: 986374510, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1368349330, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: 1586511770, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: 870882002, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      leftSide: 0
+      events: []
+      readChoice: 0
+      choice:
+        options: []
+    - speakerName: Teka
+      text: 0-0
+      idle:
+      - {fileID: -1133833936, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -21990415, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1429711860, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      talking:
+      - {fileID: 374759887, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1369013477, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      leftSide: 1
+      events: []
+      readChoice: 0
+      choice:
+        options: []
+    - speakerName: Teka
+      text: really???
+      idle:
+      - {fileID: -1133833936, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -21990415, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1429711860, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      talking:
+      - {fileID: 374759887, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1369013477, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      leftSide: 1
+      events: []
+      readChoice: 0
+      choice:
+        options: []
+    - speakerName: Teka
+      text: just "hoi" ?
+      idle:
+      - {fileID: -1133833936, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -21990415, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1429711860, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      talking:
+      - {fileID: 374759887, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1369013477, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      leftSide: 1
+      events: []
+      readChoice: 0
+      choice:
+        options: []
+    - speakerName: Crystal
+      text: but.. it is a simple test, what are you expected from "test" ??
+      idle:
+      - {fileID: -860893131, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1901659344, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -2142345123, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: 128436131, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      talking:
+      - {fileID: 986374510, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1368349330, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: 1586511770, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: 870882002, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      leftSide: 0
+      events: []
+      readChoice: 0
+      choice:
+        options: []
+    - speakerName: Teka
+      text: meh...
+      idle:
+      - {fileID: -1133833936, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -21990415, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1429711860, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      talking:
+      - {fileID: 374759887, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      - {fileID: -1369013477, guid: 6cb8e65e0f7eb9c498bde5eb01a24827, type: 3}
+      leftSide: 1
+      events: []
+      readChoice: 0
+      choice:
+        options: []

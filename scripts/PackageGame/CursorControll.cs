@@ -71,18 +71,22 @@ public class CursorControll : MonoBehaviour
         GetMouseData();
         SetCursorPos();
         SetCursorRot();
-         SetStateSprite();
-    }
-
-    public void SetStateSprite()
-    {
         if(Input.GetMouseButtonDown(0))
         {
-            spriteRenderer.sprite = sprites[1];
+            SetStateSprite(1);
         }
         else if(Input.GetMouseButtonUp(0))
         {
-            spriteRenderer.sprite = sprites[0];
+            SetStateSprite(0);
+        }
+        
+    }
+
+    public void SetStateSprite(int state = 0)
+    {
+        if(state >= 0 && state < sprites.Length)
+        {
+            spriteRenderer.sprite = sprites[state];
         }
     }
     

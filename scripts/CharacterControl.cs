@@ -16,17 +16,20 @@ public class CharacterControl : MonoBehaviour
     }
 
     // В Update собираем ввод от игрока (каждый кадр)
-    void Update()
+    public void MoveToObject(Transform target)
     {
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
+        Vector2 direction = (target.position - transform.position).normalized;
+        rb.velocity = direction * PlayerSpeed;
     }
-
+    public void StopMoving()
+    {
+        rb.velocity = Vector2.zero;
+    }
     // В FixedUpdate применяем физику (работает с фиксированным шагом времени)
     void FixedUpdate()
     {
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         
-        rb.velocity = movement.normalized * PlayerSpeed;
+        
+        
     }
 }

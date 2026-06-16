@@ -306,8 +306,8 @@ public class DialogeManager : MonoBehaviour
 
         Image icon = line.leftSide ? leftIcon : rightIcon;
 
-        leftIcon.gameObject.SetActive(line.leftSide);
-        rightIcon.gameObject.SetActive(!line.leftSide);
+        //leftIcon.gameObject.SetActive(line.leftSide);
+        //rightIcon.gameObject.SetActive(!line.leftSide);
 
         Coroutine c = StartCoroutine(
             Anim(line.idle, icon, iconAnimDelay, () => true)
@@ -323,8 +323,8 @@ public class DialogeManager : MonoBehaviour
 
         Image icon = line.leftSide ? leftIcon : rightIcon;
 
-        leftIcon.gameObject.SetActive(line.leftSide);
-        rightIcon.gameObject.SetActive(!line.leftSide);
+        //leftIcon.gameObject.SetActive(line.leftSide);
+        //rightIcon.gameObject.SetActive(!line.leftSide);
 
         speaking = true;
 

@@ -27,13 +27,13 @@ public class ItemPhysics : DefaultInteract
     {
         Debug.Log("Focus");
         cursor.SetStateSprite(2);
-        Collider.enabled = true;
+        //Collider.enabled = true;
     }
     public override void onDefocus()
     {
         Debug.Log("Defocus");
         cursor.SetStateSprite(0);
-        Collider.enabled = false;
+        //Collider.enabled = false;
     }
     public override void MouseProcess()
     {

@@ -7,6 +7,10 @@ public class PackageTrigger : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.isTrigger == true)
+        {
+            return;
+        }
         if (collision.gameObject.tag == "Tea")
         {
             switch (collision.gameObject.GetComponent<ItemPhysics>().itemType)

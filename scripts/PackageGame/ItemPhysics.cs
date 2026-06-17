@@ -7,8 +7,11 @@ public class ItemPhysics : DefaultInteract
     public CursorControll cursor;
     public Rigidbody2D rb;
     public CircleCollider2D Collider;
+
+    public SpriteRenderer Shadow;
     void Start()
     {   
+        Shadow = GetComponentInChildren<SpriteRenderer>();
         Collider = GetComponent<CircleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         cursor = GameObject.Find("hand_0").GetComponent<CursorControll>();
@@ -46,5 +49,19 @@ public class ItemPhysics : DefaultInteract
         
         rb.gravityScale = 1;
         rb.velocity = cursor.GetComponent<Rigidbody2D>().velocity;
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            Shadow.enabled = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            Shadow.enabled = false;
+        }
     }
 }

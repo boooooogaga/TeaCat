@@ -13,6 +13,8 @@ public class CursorControll : MonoBehaviour
 
     private Vector3 lastPosition;
     public float rotationSpeed = 10f;
+
+    public Vector3 customVelocity { get; private set; }
     void Start()
     {
         Cursor.visible = false;
@@ -45,7 +47,7 @@ public class CursorControll : MonoBehaviour
 
 
         // 2. Рассчитываем вектор "скорости" (разницу между кадрами)
-        Vector3 customVelocity = (transform.position - lastPosition) / Time.deltaTime;
+        customVelocity = (transform.position - lastPosition) / Time.deltaTime;
 
         // 3. Поворачиваем курсор на основе рассчитанной скорости
         if (customVelocity.sqrMagnitude > 0.01f)

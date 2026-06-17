@@ -82,7 +82,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4543830739052191439
 GameObject:
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 1217966969990460247}
   m_Layer: 0
   m_Name: "\u0447\u0430\u0439- (1)"
-  m_TagString: Untagged
+  m_TagString: Tea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,7 +230,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -260,9 +260,11 @@ MonoBehaviour:
   interactionIcon: {fileID: 0}
   canInteract: 1
   isLocked: 0
+  itemType: 0
   cursor: {fileID: 0}
   rb: {fileID: 0}
   Collider: {fileID: 0}
+  Shadow: {fileID: 3579079580172276962}
 --- !u!58 &1217966969990460247
 CircleCollider2D:
   m_ObjectHideFlags: 0

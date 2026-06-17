@@ -1388,7 +1388,9 @@ MonoBehaviour:
   interactionMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  outline: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  outline: {fileID: 2100000, guid: 204ce872495456748b37ec67ded48f4f, type: 2}
+  outlineScale: 0.05
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   localLock: {fileID: 0}
   progressed: 0
   interactionProgress: 0

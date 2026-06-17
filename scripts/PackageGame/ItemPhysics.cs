@@ -53,7 +53,7 @@ public class ItemPhysics : DefaultInteract
         Debug.Log("MouseUp");
         
         rb.gravityScale = 3;
-        rb.velocity = cursor.customVelocity * 0.5f;
+        rb.velocity = cursor.customVelocity * 0.3f;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

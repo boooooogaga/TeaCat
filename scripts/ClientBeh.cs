@@ -10,38 +10,35 @@ public class ClientBeh : DefaultInteract
     public Rigidbody2D rb;
     public CharacterControl player;
     public int Id;
-    public bool CanInteract;
+    public bool CanInteract = false;
     void Awake()
     {
-        player = GetComponent<CharacterControl>();
+        anim = GetComponent<Animator>();
+        player = GameObject.Find("Player").GetComponent<CharacterControl>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
         StartCoroutine(MoveToSpot(spot));
     }
-    void Update()
-    {
-        if(OrderManager.activeOrders[Id].redTeaRequired == 0 && OrderManager.activeOrders[Id].redTeaRequired == 0 && OrderManager.activeOrders[Id].redTeaRequired == 0)
-        {
-            
-        }
-    }
+
     public override void onFocus()
     {
-        anim.SetBool("Focus", true);
+        
+        if(CanInteract)anim.SetBool("Focus", true);
     }
 
     public override void onDefocus()
     {
-        anim.SetBool("Focus", false);
+        if(CanInteract)anim.SetBool("Focus", false);
     }
 
     public override void Interact()
     {
         if(CanInteract)
         {
-            OrderManager.Instance.AddOrder(Id, Random.Range(0,4),Random.Range(0,4),Random.Range(0,4));
+            OrderManager.Instance.AddOrder(Id,gameObject, Random.Range(0,4),Random.Range(0,4),Random.Range(0,4));
         }
     }
 
@@ -58,7 +55,9 @@ public class ClientBeh : DefaultInteract
         }
 
         // Когда дошли — принудительно останавливаем игрока
-        player.GetComponent<CharacterControl>().StopMoving();
+        rb.velocity = Vector2.zero;
+
+        CanInteract = true;
 
     }
 }

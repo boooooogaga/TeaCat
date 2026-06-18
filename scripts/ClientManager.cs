@@ -10,7 +10,7 @@ public class ClientManager : MonoBehaviour
 
     public GameObject[] clients;
 
-    private Transform spawnPoint;
+    public Transform spawnPoint;
 
     public bool[] FreeSlot = new bool[]{true,true,true};
 
@@ -27,5 +27,9 @@ public class ClientManager : MonoBehaviour
                 break; 
             }
         }
+    }
+    private void Start()
+    {
+        SpawnClient();
     }
 }

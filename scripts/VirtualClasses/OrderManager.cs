@@ -5,15 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public struct Order
 {
-    public int ID; // Имя или ID клиента (чтобы понимать, чей это заказ)
+    public int ID;
+    public GameObject Client;
     public int redTeaRequired;
     public int greenTeaRequired;
     public int blackTeaRequired;
 
     // Конструктор для удобного создания заказа одной строчкой
-    public Order(int id, int red = 0, int green = 0, int black = 0)
+    public Order(int id,GameObject obj, int red = 0, int green = 0, int black = 0)
     {
         ID = id;
+        Client = obj;
         redTeaRequired = red;
         greenTeaRequired = green;
         blackTeaRequired = black;
@@ -41,9 +43,9 @@ public class OrderManager : MonoBehaviour
     }
 
     // Добавить новый заказ в общую очередь
-    public void AddOrder(int newID, int red, int green, int black = 0)
+    public void AddOrder(int newID,GameObject Object, int red, int green, int black = 0)
     {
-        Order newOrder = new Order(newID, red, green, black);
+        Order newOrder = new Order(newID, Object, red, green, black);
         activeOrders.Add(newOrder);
     }
 
@@ -61,6 +63,14 @@ public class OrderManager : MonoBehaviour
     // Удалить заказ (например, когда мини-игра для этого клиента успешно завершена)
     public void CompleteOrder(int currentID)
     {
+        Order? orderToComplete = GetOrder(currentID);
+
+        if (orderToComplete != null && orderToComplete.Value.Client != null)
+        {
+            Destroy(orderToComplete.Value.Client);
+            Debug.Log($"Client GameObject with ID {currentID} destroyed from scene.");
+        }
+
         activeOrders.RemoveAll(order => order.ID == currentID);
     }
 

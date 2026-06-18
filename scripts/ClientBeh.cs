@@ -20,13 +20,7 @@ public class ClientBeh : DefaultInteract
     {
         StartCoroutine(MoveToSpot(spot));
     }
-    void Update()
-    {
-        if(OrderManager.activeOrders[Id].redTeaRequired == 0 && OrderManager.activeOrders[Id].redTeaRequired == 0 && OrderManager.activeOrders[Id].redTeaRequired == 0)
-        {
-            
-        }
-    }
+
     public override void onFocus()
     {
         anim.SetBool("Focus", true);
@@ -41,7 +35,7 @@ public class ClientBeh : DefaultInteract
     {
         if(CanInteract)
         {
-            OrderManager.Instance.AddOrder(Id, Random.Range(0,4),Random.Range(0,4),Random.Range(0,4));
+            OrderManager.Instance.AddOrder(Id,gameObject, Random.Range(0,4),Random.Range(0,4),Random.Range(0,4));
         }
     }
 
@@ -58,7 +52,7 @@ public class ClientBeh : DefaultInteract
         }
 
         // Когда дошли — принудительно останавливаем игрока
-        player.GetComponent<CharacterControl>().StopMoving();
+        rb.velocity = Vector2.zero;
 
     }
 }

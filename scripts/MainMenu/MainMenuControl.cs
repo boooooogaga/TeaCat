@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class MainMenuControl : DefaultInteract
 {
-    void Start()
+    public void Enter()
     {
         
     }
-    void Update()
+
+    public void Leave()
+    {
+        
+    }
+    public void Defs()
     {
         
     }

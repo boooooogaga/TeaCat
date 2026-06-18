@@ -15,6 +15,7 @@ public class ItemPhysics : DefaultInteract
     public Rigidbody2D rb;
     public CircleCollider2D Collider;
 
+    public AudioClip grabSound;
     public GameObject Shadow;
     void Start()
     {   
@@ -34,6 +35,10 @@ public class ItemPhysics : DefaultInteract
         Debug.Log("Defocus");
         cursor.SetStateSprite(0);
         //Collider.enabled = false;
+    }
+    public override void MouseDown()
+    {
+        AudioSource.PlayClipAtPoint(grabSound, transform.position);
     }
     public override void MouseProcess()
     {

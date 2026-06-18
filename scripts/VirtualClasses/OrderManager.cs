@@ -45,6 +45,10 @@ public class OrderManager : MonoBehaviour
     // Добавить новый заказ в общую очередь
     public void AddOrder(int newID,GameObject Object, int red, int green, int black = 0)
     {
+        foreach(var order in activeOrders)
+        {
+            if(order.ID == newID) return;
+        }
         Order newOrder = new Order(newID, Object, red, green, black);
         activeOrders.Add(newOrder);
     }

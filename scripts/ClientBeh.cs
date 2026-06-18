@@ -10,10 +10,12 @@ public class ClientBeh : DefaultInteract
     public Rigidbody2D rb;
     public CharacterControl player;
     public int Id;
-    public bool CanInteract;
+    public bool CanInteract = false;
     void Awake()
     {
-        player = GetComponent<CharacterControl>();
+        anim = GetComponent<Animator>();
+        player = GameObject.Find("Player").GetComponent<CharacterControl>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start()
@@ -23,12 +25,13 @@ public class ClientBeh : DefaultInteract
 
     public override void onFocus()
     {
-        anim.SetBool("Focus", true);
+        
+        if(CanInteract)anim.SetBool("Focus", true);
     }
 
     public override void onDefocus()
     {
-        anim.SetBool("Focus", false);
+        if(CanInteract)anim.SetBool("Focus", false);
     }
 
     public override void Interact()
@@ -53,6 +56,8 @@ public class ClientBeh : DefaultInteract
 
         // Когда дошли — принудительно останавливаем игрока
         rb.velocity = Vector2.zero;
+
+        CanInteract = true;
 
     }
 }

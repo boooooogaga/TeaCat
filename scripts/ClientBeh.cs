@@ -14,7 +14,6 @@ public class ClientBeh : DefaultInteract
     void Awake()
     {
         anim = GetComponent<Animator>();
-        player = GameObject.Find("Player").GetComponent<CharacterControl>();
         rb = GetComponent<Rigidbody2D>();
     }
 

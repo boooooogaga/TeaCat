@@ -24,12 +24,14 @@ public class ClientManager : MonoBehaviour
             {
                 newClient.GetComponent<ClientBeh>().spot = SpotPoints[i];
                 newClient.GetComponent<ClientBeh>().Id = i;
+                FreeSlot[i] = false;
                 break; 
             }
         }
     }
     private void Start()
     {
+        SpawnClient();
         SpawnClient();
     }
 }

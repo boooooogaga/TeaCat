@@ -24,6 +24,7 @@ public struct Order
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager Instance { get; private set; }
+    public ClientManager manager;
 
     // Список всех текущих активных заказов
     [Header("Active Orders")]
@@ -34,6 +35,7 @@ public class OrderManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            manager = GetComponent<ClientManager>();
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -73,6 +75,7 @@ public class OrderManager : MonoBehaviour
         {
             Destroy(orderToComplete.Value.Client);
             Debug.Log($"Client GameObject with ID {currentID} destroyed from scene.");
+            manager.FreeSlot[currentID] = true;
         }
 
         activeOrders.RemoveAll(order => order.ID == currentID);
